@@ -1,0 +1,29 @@
+---
+// ProfileCard.astro - Main profile card component
+---
+
+<div class="col-span-3 row-span-4 bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-6 text-white relative overflow-hidden group">
+  <div class="absolute inset-0 bg-black/20"></div>
+  <div class="relative z-10 h-full flex flex-row items-end gap-8">
+    <div class="h-full md:w-8/12 absolute top-0 left-0 p-2 md:pe-6 flex flex-col justify-start md:justify-end">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-4.5xl font-extrabold mb-2 sm:mb-4 flex items-center gap-2">
+        <span data-text="greeting"> 👋 Hi, I'm Caleb Condor Carrera</span>
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl lg:text-xl text-purple-100 leading-relaxed mb-2 sm:mb-4" data-text="description">
+        I am a frontend developer specializing in React and Next.js. I love building amazing UI experiences. I have been working professionally for +6 months and have worked on several projects.
+      </p>
+      <div class="flex items-center gap-2 text-purple-200 text-xs sm:text-sm md:text-base">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+        <span>Remote Work</span>
+      </div>
+    </div>
+    <img
+      src="/Kenny.png"
+      alt="Cartman"
+      class="absolute -bottom-8 -right-1/4 w-8/12 md:h-full md:auto object-cover -z-0 hidden md:flex"
+    />
+  </div>
+</div> 
