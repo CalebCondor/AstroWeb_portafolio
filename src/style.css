@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Ensure bento cards have a minimum height on mobile */
+.bento-grid > * {
+  min-height: 140px;
+}
+
 .noise-bg {
   position: relative;
 }
