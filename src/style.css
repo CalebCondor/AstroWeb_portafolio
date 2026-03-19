@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/noise.gif');
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: 0.12;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 9999;
+}
