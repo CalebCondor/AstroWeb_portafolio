@@ -25,7 +25,7 @@ import "../style.css";
   <div class="min-h-screen bg-[#150d1a] p-5 sm:p-6 cartman-bg noise-bg">
     <div class="xl:max-w-[75vw] mx-auto">
       <!-- Grid Layout -->
-      <div class="bento-grid grid grid-cols-3 auto-rows-[calc((100vw-4.5rem)/3)] md:auto-rows-auto md:grid-cols-4 md:grid-rows-12 gap-4 md:gap-3.5 xl:h-[2100px]">
+      <div class="bento-grid grid grid-cols-3 auto-rows-[calc((100vw-4.5rem)/3)] md:auto-rows-auto md:grid-cols-4 md:grid-rows-12 gap-2 md:gap-3.5 xl:h-[2100px]">
         <!-- 1 - Main Profile Card -->
         <ProfileCard />
 
@@ -37,28 +37,28 @@ import "../style.css";
 
         <!-- 4 - Projects Count -->
         <div
-          class="md:row-span-2 md:row-start-5 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-6 text-white flex flex-col justify-center items-center select-none"
+          class="md:row-span-2 md:row-start-5 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-3 md:p-6 text-white flex flex-col justify-center items-center select-none"
         >
           <div
-            class="text-2xl font-extrabold text-white mb-2 transition-all duration-200"
+            class="text-xs md:text-2xl font-extrabold text-white mb-1 md:mb-2 transition-all duration-200"
             id=""
           >
             AGE
           </div>
           <div
-            class="text-6xl font-extrabold text-white mb-2 transition-all duration-200"
+            class="text-3xl md:text-6xl font-extrabold text-white mb-1 md:mb-2 transition-all duration-200"
             id="age-value"
           >
             20
           </div>
-          <div id="age-label" class="text-2xl font-bold text-white/80">
+          <div id="age-label" class="text-xs md:text-2xl font-bold text-white/80">
             years
           </div>
         </div>
 
         <!-- 9 - Skills -->
         <div
-          class="md:row-span-2 md:row-start-5 bg-gradient-to-br from-amber-600 to-orange-600 rounded-3xl p-6 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
+          class="md:row-span-2 md:row-start-5 bg-gradient-to-br from-amber-600 to-orange-600 rounded-3xl p-3 md:p-6 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
         >
           <div class="absolute inset-0 opacity-20">
             <div class="grid grid-cols-3 gap-2 h-full">
@@ -83,10 +83,10 @@ import "../style.css";
             </div>
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between">
-            <div class="text-xl text-orange-200 mb-2" data-text="skillsText">
+            <div class="text-xs md:text-xl text-orange-200 mb-1 md:mb-2" data-text="skillsText">
               Skills & Technologies
             </div>
-            <div class="grid grid-cols-2 gap-1 text-xl">
+            <div class="grid grid-cols-2 gap-1 text-xs md:text-xl">
               <span>React</span>
               <span>Next.js</span>
               <span>TypeScript</span>
@@ -97,16 +97,16 @@ import "../style.css";
 
         <!-- 10 - Projects Description -->
         <div
-          class="col-span-2 md:row-span-2 md:row-start-5 bg-[url('/cartman_paz.gif')] bg-cover bg-center bg-no-repeat bg-slate-800/90 backdrop-blur-sm rounded-3xl p-6 text-white border border-slate-700/50 group hover:scale-[1.02] transition-transform duration-300"
+          class="col-span-2 md:row-span-2 md:row-start-5 bg-[url('/cartman_paz.gif')] bg-cover bg-center bg-no-repeat bg-slate-800/90 backdrop-blur-sm rounded-3xl p-3 md:p-6 text-white border border-slate-700/50 group hover:scale-[1.02] transition-transform duration-300"
         >
           <h3
-            class="text-2xl font-semibold mb-2 text-purple-300"
+            class="text-sm md:text-2xl font-semibold mb-1 md:mb-2 text-purple-300"
             data-text="projectsTitle"
           >
             Projects and tests
           </h3>
           <p
-            class="text-slate-300 text-xl leading-relaxed mb-3"
+            class="text-slate-300 text-xs md:text-xl leading-relaxed mb-1 md:mb-3"
             data-text="projectsDesc"
           >
             Here you can find some of my projects, both professional and
@@ -114,13 +114,13 @@ import "../style.css";
           </p>
           <div class="flex items-center gap-2 text-purple-400">
             <ExternalLink class="w-4 h-4" />
-            <span class="text-xl">View Portfolio</span>
+            <span class="text-xs md:text-xl">View Portfolio</span>
           </div>
         </div>
 
         <!-- 11 - GitHub -->
         <div
-          class="col-span-2 md:row-span-2 md:row-start-7 bg-[url('/ardilla.gif')] bg-cover bg-no-repeat bg-center rounded-3xl p-6 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
+          class="col-span-2 md:row-span-2 md:row-start-7 bg-[url('/ardilla.gif')] bg-cover bg-no-repeat bg-center rounded-3xl p-3 md:p-6 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
         >
           <!-- dark overlay so text stays readable -->
           <div class="absolute inset-0 bg-slate-900/60 rounded-3xl"></div>
@@ -129,11 +129,11 @@ import "../style.css";
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between">
             <div>
-              <Github class="w-12 h-12 text-white/70" />
+              <Github class="w-6 h-6 md:w-12 md:h-12 text-white/70" />
             </div>
             <div class="">
-              <div class="text-xl text-white/60 mb-1">GitHub</div>
-              <div class="text-xl text-white/50" data-text="githubText">
+              <div class="text-xs md:text-xl text-white/60 mb-1">GitHub</div>
+              <div class="text-xs md:text-xl text-white/50" data-text="githubText">
                 My projects
               </div>
             </div>
@@ -142,14 +142,14 @@ import "../style.css";
 
         <!-- 12 - Experience -->
         <div
-          class="md:row-span-2 md:col-start-3 md:row-start-7 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-6 text-white group hover:scale-[1.02] transition-transform duration-300"
+          class="md:row-span-2 md:col-start-3 md:row-start-7 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-3 md:p-6 text-white group hover:scale-[1.02] transition-transform duration-300"
         >
           <div
             class="h-full flex flex-col justify-center items-center text-center"
           >
-            <div class="text-4xl font-bold mb-1">+6m</div>
+            <div class="text-xl md:text-4xl font-bold mb-1">+6m</div>
             <div
-              class="text-blue-100 text-xl font-medium"
+              class="text-blue-100 text-xs md:text-xl font-medium"
               data-text="experienceText"
             >
               MONTHS EXPERIENCE
@@ -159,16 +159,16 @@ import "../style.css";
 
         <!-- 13 - Twitter -->
         <div
-          class="md:row-span-2 md:col-start-4 md:row-start-7 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-6 text-white flex items-center justify-center group hover:scale-[1.02] transition-transform duration-300 cursor-pointer"
+          class="md:row-span-2 md:col-start-4 md:row-start-7 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-3 md:p-6 text-white flex items-center justify-center group hover:scale-[1.02] transition-transform duration-300 cursor-pointer"
         >
           <Twitter
-            class="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
+            class="w-6 h-6 md:w-10 md:h-10 group-hover:scale-110 transition-transform duration-300"
           />
         </div>
 
         <!-- 14 - Currently Working -->
         <div
-          class="col-span-2 md:row-span-2 md:row-start-9 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-3xl p-6 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
+          class="col-span-2 md:row-span-2 md:row-start-9 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-3xl p-3 md:p-6 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
         >
           <div class="absolute top-3 right-3">
             <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
@@ -176,18 +176,18 @@ import "../style.css";
           <div class="h-full flex flex-col justify-between">
             <div>
               <h3
-                class="text-2xl font-semibold mb-2"
+                class="text-sm md:text-2xl font-semibold mb-1 md:mb-2"
                 data-text="currentlyText"
               >
                 Currently focused
               </h3>
-              <p class="text-emerald-100 text-xl" data-text="workText">
+              <p class="text-emerald-100 text-xs md:text-xl" data-text="workText">
                 Working remotely on amazing projects with talented teams.
               </p>
             </div>
             <div class="flex items-center gap-2 text-emerald-200">
               <Users class="w-4 h-4" />
-              <span class="text-xl">Remote Team</span>
+              <span class="text-xs md:text-xl">Remote Team</span>
             </div>
           </div>
         </div>
@@ -197,13 +197,13 @@ import "../style.css";
 
         <!-- 16 - Contact Level -->
         <div
-          class="md:row-span-2 md:col-start-4 md:row-start-9 bg-slate-700/90 backdrop-blur-sm rounded-3xl p-6 text-white flex items-center justify-center group hover:scale-[1.02] transition-transform duration-300 cursor-pointer border border-slate-600/50"
+          class="md:row-span-2 md:col-start-4 md:row-start-9 bg-slate-700/90 backdrop-blur-sm rounded-3xl p-3 md:p-6 text-white flex items-center justify-center group hover:scale-[1.02] transition-transform duration-300 cursor-pointer border border-slate-600/50"
         >
           <div class="text-center">
             <Mail
-              class="w-8 h-8 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300"
+              class="w-5 h-5 md:w-8 md:h-8 mx-auto mb-1 md:mb-2 group-hover:scale-110 transition-transform duration-300"
             />
-            <div class="text-xl text-slate-400" data-text="offlineText">
+            <div class="text-xs md:text-xl text-slate-400" data-text="offlineText">
               Offline
             </div>
           </div>
@@ -214,7 +214,7 @@ import "../style.css";
           class="md:row-span-2 md:row-start-11 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-4 text-white flex items-center justify-center group hover:scale-[1.02] transition-transform duration-300 cursor-pointer"
         >
           <svg
-            class="w-24 h-24 group-hover:scale-110 transition-transform duration-300 fill-white"
+            class="w-10 h-10 md:w-24 md:h-24 group-hover:scale-110 transition-transform duration-300 fill-white"
             viewBox="0 0 1200 1227"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -226,7 +226,7 @@ import "../style.css";
 
         <!-- 18 - Weather Lima, Peru -->
         <div
-          class="col-span-2 md:row-span-2 md:row-start-11 bg-gradient-to-br from-indigo-500 via-purple-600 to-violet-700 rounded-3xl p-5 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
+          class="col-span-2 md:row-span-2 md:row-start-11 bg-gradient-to-br from-indigo-500 via-purple-600 to-violet-700 rounded-3xl p-3 md:p-5 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
         >
           <!-- Decorative blobs -->
           <div
@@ -239,49 +239,49 @@ import "../style.css";
           </div>
 
           <!-- Header row -->
-          <div class="relative z-10 flex items-start justify-between mb-3">
+          <div class="relative z-10 flex items-start justify-between mb-1 md:mb-3">
             <div>
               <p
-                class="text-xl font-semibold uppercase tracking-widest text-indigo-200"
+                class="text-xs md:text-xl font-semibold uppercase tracking-widest text-indigo-200"
               >
                 Weather
               </p>
-              <p class="text-xl text-indigo-300 flex items-center gap-1 mt-0.5">
+              <p class="text-xs md:text-xl text-indigo-300 flex items-center gap-1 mt-0.5">
                 <MapPin class="w-3 h-3" /> Lima, PE
               </p>
             </div>
-            <span id="weather-icon" class="text-4xl drop-shadow-lg">☀️</span>
+            <span id="weather-icon" class="text-2xl md:text-4xl drop-shadow-lg">☀️</span>
           </div>
 
           <!-- Temperature -->
-          <div class="relative z-10 flex items-end gap-2 mb-2">
+          <div class="relative z-10 flex items-end gap-2 mb-1 md:mb-2">
             <span
               id="weather-temp"
-              class="text-5xl font-black tracking-tight leading-none">--°</span
+              class="text-2xl md:text-5xl font-black tracking-tight leading-none">--°</span
             >
           </div>
 
           <!-- Condition -->
           <div class="relative z-10">
-            <div id="weather-desc" class="text-xl font-medium text-indigo-100">
+            <div id="weather-desc" class="text-xs md:text-xl font-medium text-indigo-100">
               Loading...
             </div>
             <div class="mt-2 h-px bg-white/10"></div>
             <div class="mt-2 flex items-center gap-1 text-indigo-300">
               <Globe class="w-3 h-3" />
-              <span class="text-xl">Live · Open-Meteo</span>
+              <span class="text-xs md:text-xl">Live · Open-Meteo</span>
             </div>
           </div>
         </div>
 
         <!-- 19 - Additional Info -->
         <div
-          class="md:row-span-2 md:col-start-4 md:row-start-11 bg-gradient-to-br from-violet-600 to-violet-700 rounded-3xl p-6 text-white group hover:scale-[1.02] transition-transform duration-300"
+          class="md:row-span-2 md:col-start-4 md:row-start-11 bg-gradient-to-br from-violet-600 to-violet-700 rounded-3xl p-3 md:p-6 text-white group hover:scale-[1.02] transition-transform duration-300"
         >
           <div
             class="h-full flex flex-col justify-center items-center text-center"
           >
-            <div class="text-2xl font-bold mb-1">B2</div>
+            <div class="text-base md:text-2xl font-bold mb-1">B2</div>
             <div class="text-teal-100 text-xs" data-text="contactText">
               Let's work together
             </div>
