@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ExternalLink, ArrowLeft, Github, Globe, Code } from "lucide-astro";
+import "../style.css";
+
+const projects = [
+  {
+    title: "Portfolio 2024",
+    description: "My previous personal portfolio built with React and Framer Motion.",
+    tags: ["React", "Framer Motion", "Tailwind"],
+    link: "#",
+    github: "#",
+    image: "/github.gif"
+  },
+  {
+    title: "E-commerce Platform",
+    description: "A full-stack e-commerce solution with Next.js and Stripe integration.",
+    tags: ["Next.js", "TypeScript", "Prisma"],
+    link: "#",
+    github: "#",
+    image: "/ardilla.gif"
+  }
+];
+---
+
+<Layout title="Projects - Caleb Condor">
+  <div class="min-h-screen bg-[#150d1a] p-5 sm:p-8 cartman-bg noise-bg">
+    <div class="xl:max-w-[75vw] mx-auto animate-entrance">
+      <!-- Back Button -->
+      <a 
+        href="/" 
+        class="inline-flex items-center gap-2 text-purple-300 hover:text-white transition-colors mb-8 group"
+      >
+        <ArrowLeft class="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+        <span class="font-bold">Back to Dashboard</span>
+      </a>
+
+      <!-- Header -->
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight">
+          My <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Projects</span>
+        </h1>
+        <p class="text-purple-200/70 text-lg md:text-xl max-w-2xl leading-relaxed">
+          A collection of my professional work, open-source contributions, and experimental side projects.
+        </p>
+      </header>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project) => (
+          <div class="bg-slate-800/40 backdrop-blur-md rounded-3xl border border-slate-700/50 overflow-hidden group hover:border-purple-500/50 transition-all duration-300">
+            <div class="h-48 overflow-hidden relative">
+              <img src={project.image} alt={project.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold text-white">{project.title}</h3>
+                <div class="flex gap-3">
+                  <a href={project.github} class="text-slate-400 hover:text-white transition-colors" title="View Source">
+                    <Github class="w-6 h-6" />
+                  </a>
+                  <a href={project.link} class="text-slate-400 hover:text-white transition-colors" title="Live Demo">
+                    <ExternalLink class="w-6 h-6" />
+                  </a>
+                </div>
+              </div>
+              
+              <p class="text-slate-300 mb-6 line-clamp-2">{project.description}</p>
+              
+              <div class="flex flex-wrap gap-2">
+                {project.tags.map(tag => (
+                  <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-bold border border-purple-500/30">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <!-- Empty State / More coming soon -->
+        <div class="bg-slate-800/20 backdrop-blur-sm rounded-3xl border border-dashed border-slate-700/50 p-8 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-slate-800/30 transition-all">
+          <div class="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Code class="w-8 h-8 text-slate-500" />
+          </div>
+          <h3 class="text-xl font-bold text-slate-500">More projects coming soon...</h3>
+          <p class="text-slate-600 text-sm mt-2">I'm always building something new.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

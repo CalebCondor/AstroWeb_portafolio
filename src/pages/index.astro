@@ -96,28 +96,34 @@ import "../style.css";
         </div>
 
         <!-- 10 - Projects Description -->
-        <div
-          class="col-span-2 md:row-span-2 md:row-start-5 bg-[url('/github.gif')] bg-cover bg-center bg-no-repeat bg-slate-800/90 backdrop-blur-sm rounded-3xl p-3 md:p-6 text-white border border-slate-700/50 group hover:scale-[1.02] transition-transform duration-300"
+        <a
+          href="/projects"
+          class="col-span-2 md:row-span-2 md:row-start-5 bg-[url('/github.gif')] bg-cover bg-center bg-no-repeat bg-slate-800/90 backdrop-blur-sm rounded-3xl p-3 md:p-6 text-white border border-slate-700/50 group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden block"
         >
           <!-- overlay with higher opacity to improve contrast -->
-          <div class="absolute inset-0 bg-slate-900/40 rounded-3xl"></div>
+          <div class="absolute inset-0 bg-slate-900/40 rounded-3xl group-hover:bg-slate-900/20 transition-colors duration-300"></div>
           
-          <div class="relative z-10">
-            <h3
-              class="text-sm md:text-2xl font-bold mb-1 md:mb-2 text-white "
-              data-text="projectsTitle"
-            >
-              Projects and tests
-            </h3>
-            <p
-              class="text-white text-xs md:text-xl font-medium leading-relaxed mb-1 md:mb-3"
-              data-text="projectsDesc"
-            >
-              Here you can find some of my projects, both professional and
-              personal.
-            </p>
+          <div class="relative z-10 h-full flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-sm md:text-2xl font-bold mb-1 md:mb-2 text-white flex items-center gap-2"
+                data-text="projectsTitle"
+              >
+                Projects and tests <ExternalLink class="w-4 h-4 opacity-70 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </h3>
+              <p
+                class="text-white text-xs md:text-xl font-medium leading-relaxed mb-1 md:mb-3"
+                data-text="projectsDesc"
+              >
+                Here you can find some of my projects, both professional and
+                personal.
+              </p>
+            </div>
+            <div class="text-[10px] md:text-sm text-white/50 font-bold uppercase tracking-wider">
+              Click to explore
+            </div>
           </div>
-        </div>
+        </a>
 
         <!-- 11 - GitHub -->
         <div
