@@ -32,6 +32,43 @@ async function fetchDiscordPresence() {
   }
 }
 
+// Lanyard WebSocket Integration
+function connectLanyardWS(callback: (data: any) => void) {
+  const socket = new WebSocket('wss://api.lanyard.rest/socket');
+
+  socket.addEventListener('open', () => {
+    // Suscribirse a los cambios del usuario
+    socket.send(JSON.stringify({
+      op: 2, // Initialize
+      d: {
+        subscribe_to_id: DISCORD_USER_ID
+      }
+    }));
+  });
+
+  socket.addEventListener('message', (event) => {
+    const data = JSON.parse(event.data);
+
+    // Heartbeat
+    if (data.op === 1) {
+      const heartbeatInterval = data.d.heartbeat_interval;
+      setInterval(() => {
+        socket.send(JSON.stringify({ op: 3 }));
+      }, heartbeatInterval);
+    }
+
+    // Evento de actualización (INIT_STATE o PRESENCE_UPDATE)
+    if (data.t === 'INIT_STATE' || data.t === 'PRESENCE_UPDATE') {
+      callback({ success: true, data: data.d });
+    }
+  });
+
+  socket.addEventListener('close', () => {
+    // Reintentar conexión si se cierra
+    setTimeout(() => connectLanyardWS(callback), 5000);
+  });
+}
+
 // Get current activity text
 function getCurrentActivity(data: any) {
   if (data.data.listening_to_spotify && data.data.spotify) {
@@ -87,11 +124,11 @@ function updateDiscordStatus(data: any) {
 }
 
 export async function initDiscordStatus() {
-  const data = await fetchDiscordPresence();
-  updateDiscordStatus(data);
+  const initialData = await fetchDiscordPresence();
+  updateDiscordStatus(initialData);
   
-  setInterval(async () => {
-    const data = await fetchDiscordPresence();
+  // Connect to WebSocket for real-time updates
+  connectLanyardWS((data) => {
     updateDiscordStatus(data);
-  }, 30000);
+  });
 } 
