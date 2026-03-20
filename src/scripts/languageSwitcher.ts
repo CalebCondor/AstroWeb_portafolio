@@ -49,11 +49,11 @@ export function updateLangVisual() {
   if (langCurrent) langCurrent.textContent = currentLanguage;
   if (enLabel && esLabel) {
     if (currentLanguage === 'EN') {
-      enLabel.classList.add('active');
-      esLabel.classList.remove('active');
+      enLabel.classList.add('lang-active');
+      esLabel.classList.remove('lang-active');
     } else {
-      esLabel.classList.add('active');
-      enLabel.classList.remove('active');
+      esLabel.classList.add('lang-active');
+      enLabel.classList.remove('lang-active');
     }
   }
   

@@ -2,10 +2,38 @@
 // LanguageSwitcher.astro - Language switcher component
 ---
 
-<div id="lang-switcher" class="md:row-span-2 md:col-start-4 bg-gradient-to-br bg-[#5B3E96] rounded-3xl p-3 md:p-4 text-white flex flex-col justify-center items-center select-none">
-  <div id="lang-current" class="text-3xl md:text-6xl font-extrabold text-white mb-1 md:mb-2 transition-all duration-200">EN</div>
-  <div class="flex gap-2 text-xs md:text-base font-bold">
-    <span id="lang-en-label" class="transition-all duration-200">EN</span>
-    <span id="lang-es-label" class="transition-all duration-200">ES</span>
+<div
+  id="lang-switcher"
+  class="md:row-span-2 md:col-start-4 bg-[#af72ff56] rounded-3xl p-3 md:p-4 text-white flex flex-col justify-center items-center select-none cursor-pointer hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group"
+>
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+  >
   </div>
-</div> 
+
+  <div
+    id="lang-current"
+    class="text-3xl md:text-6xl font-black text-white mb-1 md:mb-2 transition-all duration-300 drop-shadow-md"
+  >
+    EN
+  </div>
+  <div
+    class="flex gap-3 text-xs md:text-lg font-black tracking-widest relative z-10"
+  >
+    <span id="lang-en-label" class="text-white transition-all duration-300 px-2 py-0.5"
+      >EN</span
+    >
+    <span id="lang-es-label" class="text-white transition-all duration-300 px-2 py-0.5"
+      >ES</span
+    >
+  </div>
+</div>
+
+<style>
+  /* Active state styles managed by JS, but defined here for power */
+  .lang-active {
+    color: #ba7ff5 !important;
+    transform: scale(1.1);
+  }
+</style>
+
